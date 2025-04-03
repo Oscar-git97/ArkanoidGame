@@ -76,6 +76,9 @@ class Brick:
     def __init__(self, brick_rect, value):
         self.rect = brick_rect
         self.value = value
+    def draw(self, screen):
+        color = getColor(self.value)
+        pygame.draw.rect(screen, color, self.rect)
 
 def calc_value(i):
     if i <= 1:
